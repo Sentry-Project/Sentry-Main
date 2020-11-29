@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style-Setting.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+ <img src="Sentry.png" ></img>
+<a class="imag-space"></a>
+  <a href="#SignOut" class="first">Sign Out</a>
+  <a class="first" href="#Alert">Alert</a>
+  <a class="first" href="#MySentry">MySentry</a>
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+  <div class="left_nav">
+  <img src="emma_home.png"></img>
+  <li>Emma's Home</li>
+  <br>
+  <li><a href="#Profile">Profile</a></li>
+  <li><a href="#Devices">Devices</a></li>
+  <li><a href="#Sensors">Sensors</a></li>
+  <li><a href="#Rooms">Rooms</a></li>
+  <li><a href="#Accounts">Accounts</a></li>
+  
+    </div>
+
+<div class="module">
+    <span>
+   <h1>&nbsp;Settings</h1>
+   <h2>&nbsp;&nbsp;Profile</h2>
+  
+     <div class="Setting">
+        <ul class="list">
+        <li>Full Name</li>
+        <li><input type="name" placeholder="Emma" name="Set_f_name" id="Set_f_name" required ></input>  <input type="name" placeholder="Watson" name="Set_l_name" id="Set_l_name" required></input></li>
+        <br>
+		<li>Email Address</li>
+        <li><input type = "long" placeholder ="ewatson@gmail.com" id = "Set_email" required></input></li>
+		<br>
+		<li>Phone Number</li>
+        <li><input type = "long" placeholder = "+33 7 12 34 53 2"></input></li>
+		<br>
+		<li>House Address</li>
+        <li><input type = "long" placeholder = "5 rue Dejean, Boulevard,75002"></input></li>
+		<br>
+		<li>Emergency Contact</li>
+        <li><input type ="long" placeholder = "+33 7 12 34 53 2"></input></li>
+		<br>
+		<li><button type = "save" class="registerbtn"><b>SAVE</b></button></li>
+		</ul>
+     </div>
+     </span>
+
+
+ 
+
+
+
+</div>
+
+
+</body>
+</html>

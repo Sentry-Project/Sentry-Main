@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+.left_nav{
+  overflow: scroll;
+  list-style-type: none;
+  margin-left:-10px;
+  padding:0;
+  width: 25%;
+  height: 100%;
+  background-color: #293242;
+  position: fixed; 
+}
+
+.left_nav img{
+   display: block;
+   margin: auto;
+   width:80px;
+   height:80px;
+}
+
+.left_nav li{
+  font-size: 25px;
+  text-align:center;
+  color: white;
+  
+}
+.left_nav li a{
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+.left_nav li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color:white;
+}
+.topnav img{
+  position: fixed;
+  width: 150px;
+  height: 124px;
+  left: 30px;
+  top: 3px;
+}
+.topnav a {
+  color: black;
+  padding: 40px 34px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color:#293242;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+.first{ float: right; margin-right: 5%}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: sticky;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  padding-top: 50px;
+  }
+  .first{ float: bottom; margin-right: 5%}
+  }
+
+
+.module{
+	margin-left:27%;
+	padding:1px 16px;
+  height: 1000px;
+}
+.module span
+{
+  display:block;
+}
+.module div.photo{
+margin-left: 10px;
+display: inline-block;
+width: 50px;
+}
+.module div.Setting{
+display: inline-block;
+}
+.module ul.list{
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 550;
+}
+.module div.photo img{
+  display: block;
+  background-position:top right;
+  left: 0;
+  top:0;
+  width: 50px;
+  height: 50px;
+  
+}
+
+.module p.note{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  border:2px;
+  padding:10px 15px; 
+  background: #C3000C;
+  width:400px;
+  border-radius:12px;
+  margin-left: 30px;
+}
+
+.module div.img{
+    margin: 30px;
+    border: 5px solid black;
+    border-radius:12px;
+    float: left;
+    width: 200px;
+}
+.module div.img img{
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: auto;
+}
+
+.module div.desc {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.module div.conte {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+
+.module div.img:hover{
+   border: 5px solid #ccc;
+   background-color: #ccc;
+   transition: all .5s ease-in-out;
+ }
+
+@media screen and (max-width: 768px) {
+    .left_nav{
+  width: 20%;
+ }
+  .left_nav img{
+   width:40px;
+   height:40px;
+  }
+  .left_nav li{
+  font-size: 15px;
+  }
+  
+  .module p.note{
+  font-weight: bold;
+  font-size: 15px;
+   width:300px;
+   }
+}
+@media screen and(max-width: 320px){
+   .left_nav{
+  width: 15%;
+ }
+  .left_nav img{
+   width:35px;
+   height:35px;
+  }
+  .left_nav li{
+  font-size: 8px;
+  }
+  .module p.note{
+  font-weight: bold;
+  font-size: 10px;
+   width:200px;
+   }
+}
+input[type = name]{
+width: 233px;
+height: 30px;
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 11px;
+}
+input[type  = long]{
+width: 512px;
+height: 30px;
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 11px;
+}
+
+button[type = save]{
+width: 130px;
+height: 58px;
+background-color: #CCCCCC;
+color: white;
+border: none;
+
+}
