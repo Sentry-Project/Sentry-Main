@@ -41,6 +41,101 @@ p {
 
 /* THE END OF PRESET STYLES...YOU CAN EDIT FROM BELOW */
 
+/*login.html, Register.html*/
+	div.Log-Main{
+	width:100%;
+	height: 500px;
+	}
+	div.left {
+     
+		 background: #293242;
+		 float: left;
+		 width: 591px;
+		height: 1000px;
+		color: white;
+		 text-align:center;
+    }
+	div.right {
+	position:absolute ; 
+	left:600px;
+    
+	 background: white;
+		color: black;
+		 height: 600px;
+    }
+
+	h1[type = "h1-left"] {
+  height: 600px  
+  font-size: 50px;
+  }
+  h1[type = "h1-right"] {
+   
+  font-size: 36px;
+  text-indent: 100px
+  }
+  h2[type = "h2-right"]{
+ 
+  }
+button[type = Login]{
+	
+	width: 130px;
+	height: 58px;
+	background-color: white;
+	color: black;
+	border: none;
+	}
+
+
+
+
+	input[type = f_name] {
+		width: 190px;
+        height: 33px;
+      }
+      input[type = l_name] {
+		width: 190px;
+		height: 33px;
+      }
+      input[type = email] {  
+		width: 400px;
+		height: 33px;	
+      }
+      input[type = password ] {  
+		width: 400px;
+		height: 33px;
+      }   
+	  input[type = psw-repeat ] {
+		width: 400px;
+		height: 33px;
+     }    
+	  label[type = f_name ] {	
+		width: 130px;
+		height: 28px;
+     }  
+	  label[type = email ] {
+		width: 165px;
+		height: 28px;
+      }  
+	   label[type = password ] {		
+		width: 110px;
+		height: 28px;
+      }  
+	  label[type = psw-repeat ] {
+		width: 300px;
+		height: 28px;
+      }
+	   button[type = submit ] {
+		width: 126px;
+		height: 66px;
+		
+		background-color: #293242;
+	    color: #FFFFFF
+      }   
+
+
+/*End of Login, Registration.html*/
+
+
 /* HEADER - NAVBAR -- ADD YOUR CSS HERE*/
 #main-nav {
   background: #fff;
@@ -87,6 +182,9 @@ p {
 #footer {
   background: var(--primary-color);
   color: #fff;
+	position:absolute ; 
+	bottom:0;
+    
 }
 
 #footer p {
@@ -94,6 +192,10 @@ p {
   text-align: center;
   font-size: small;
 }
+
+
+
+
 
 /* MEDIA QUERIES -- ALL MEDIA QUERIES SHOULD BE AT BOTTOM */
 
@@ -119,3 +221,4 @@ p {
   }
   
 }
+
