@@ -56,10 +56,6 @@
             <input type="text" name="dname" id="new-device">
             <label for="new-device">Device 2</label>
             <input type="text" name="dname" id="new-device">
-			<label for="new-device">Device 2</label>
-            <input type="text" name="dname" id="new-device">
-			<label for="new-device">Device 2</label>
-            <input type="text" name="dname" id="new-device">
             
 
             <input type="submit" value="save room" class="h-btn">

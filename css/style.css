@@ -162,6 +162,48 @@ label[type = f_name ] {
 
 
 /*End of Login, Registration.html*/
+/*Setting.html*/
+ #set-profile .set-profile-form {
+   max-width: 500px;
+   margin-left: 25%;
+ }
+
+ #new-room .set-profile-form h2{
+   margin: 1rem 0;
+ }
+
+ .set-profile-form label {
+   display: block;
+   font-weight: bold;
+   margin-top: 1rem;
+   margin-bottom: .5rem;
+ }
+
+ .set-profile-form input {
+   width: 100%;
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+
+ .set-profile-form input[type = "name"] {
+   width: 49.5%;
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+  .set-profile-form input[type = "submit"] {
+  
+   width: 130px;
+height: 58px;
+ 
+   border: 1px solid rgb(172, 166, 166);
+   padding: .5rem;
+ }
+
+
+
+
+
+/*End of Setting.html*/
 /* HEADER - NAVBAR -- ADD YOUR CSS HERE*/
 #main-nav {
   background: #fff;
@@ -686,6 +728,11 @@ float: left;
     font-size: 26px;
   }
   
+
+
+
+
+
   /* FOOTER */
   #footer p {
     font-size: smaller;

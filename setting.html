@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
   <link rel="stylesheet"  href="css/style.css">
-  <title>Sentry | Add Room</title>
+  <title>Sentry | Setting</title>
 </head>
 <body>
   <!-- MAIN NAVBAR (THIS IS WHERE YOU WILL COPY FROM and the footer down below haha) -->
@@ -21,7 +21,7 @@
       <img src="./images/sentry.png" alt="Sentry Website Logo" class="logo">
 
       <ul>
-        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="homepage.html" class="current">Home</a></li>
         <li><a href="#services" >Services</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="register.html">Login/Register</a></li>
@@ -34,42 +34,42 @@
     <i class="fas fa-home fa-4x"></i>
     <li>Emma's Home</li>
     <br>
-    <li><a href="#Livingroom">Living Room</a></li>
-    <li><a href="#Kitchen">Kitchen</a></li>
-    <li><a href="#Bedroom1">Bedroom1</a></li>
-    <li><a href="#Foyer">Foyer</a></li>
+    <li><a href="#Profile">Profile</a></li>
+    <li><a href="#Devices">Devices</a></li>
+    <li><a href="#Sensors">Sensors</a></li>
+    <li><a href="#Rooms">Rooms</a></li>
+	<li><a href="#Accounts">Accounts</a></li>
     <br>
     <br>
-    <li>--------</li>
-      <li><a href="AddNewRoom.html">Add New Room</a></li>
-      <li><a href="Setting.html">Settings</a></li>
+	  <li>--------</li>
+      <li><a href="newroom.html">Add New Room</a></li>
+      <li><a href="setting.html">Settings</a></li>
+      </div>
       </div>
 
-    <section id="new-room">
+    <section id="set-profile">
       <div class="container">
-        <div class="new-room-form">
-          <h2>Add New Room</h2>
+        <div class="set-profile-form">
+          <h1>Settings</h1>
+		  <h2>Profile</h2>
           <form action="">
-            <label for="room-name">Room Name</label>
-            <input type="text" name="rname" id="room-name">
-            <label for="new-device">Device 1</label>
-            <input type="text" name="dname" id="new-device">
-            <label for="new-device">Device 2</label>
-            <input type="text" name="dname" id="new-device">
-			<label for="new-device">Device 2</label>
-            <input type="text" name="dname" id="new-device">
-			<label for="new-device">Device 2</label>
-            <input type="text" name="dname" id="new-device">
-            
-
-            <input type="submit" value="save room" class="h-btn">
+            <label for="set-name">Full Name</label>
+            <input type="name" name="fname" id="first-name" placeholder="Emma">
+			<input type="name" name="lname" id="last-name" placeholder="Watson">
+            <label for="new-device">Email Address</label>
+            <input type="text" name="email" id="email-address" placeholder ="ewatson@gmail.com">
+            <label for="new-device">Phone Number</label>
+            <input type="text" name="p-number" id="p-number" placeholder = "+33 7 12 34 53 2">  
+			<label for="new-device">House Address</label>
+            <input type="text" name="address" id="house-address" placeholder = "5 rue Dejean, Boulevard,75002">
+			<label for="new-device" >Emergengy Contact</label>
+            <input type="text" name="dname" id="emergency-contact" placeholder = "+33 7 12 34 53 2">
+<br><br>
+            <input type="submit" value="Save" >
             
           </form>
 
-          <div class="new-device-icon">
-            <i class="fas fa-plus-circle fa-2x"></i>
-            <p>Add Another Device</p>
-          </div>
+       
           
         </div>
       </div>
