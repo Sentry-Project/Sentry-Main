@@ -41,38 +41,56 @@ p {
 
 /* THE END OF PRESET STYLES...YOU CAN EDIT FROM BELOW */
 /*login.html, Register.html*/
-	div.Log-Main{
-	width:100%;
-	height: 500px;
-	}
-	div.left {
+	
+	div.left-login {
      
+		z-index: 1000;
 		 background: #293242;
+		  position: fixed;
+		   margin-left:-30px;
+		     padding:50px 0;
 		 float: left;
-		 width: 591px;
-		height: 1000px;
+		 width: 45%;
+		height: 100%;
 		color: white;
 		 text-align:center;
+
+  
+
+  list-style-type: none;
+
     }
-	div.right {
-	position:absolute ; 
-	left:600px;
-    
-	 background: white;
-		color: black;
-		 height: 600px;
+	div.right-login {
+	position: fixed ; 
+	margin-left:45%;
+	padding:2px 16px;
+	background: white;
+	color: black;
+	width: 40%;
+	height: 600px;
+    }
+	div.login-form {
+	max-width: 100%;
+   margin-left: 5%;
     }
 
-	h1[type = "h1-left"] {
+	h1[type = "h1-left-login"] {
+  
   height: 600px  
   font-size: 50px;
   }
-  h1[type = "h1-right"] {
-   
+  h1[type = "h1-right-login"] {
+   display: block;
   font-size: 36px;
-  text-indent: 100px
+  text-indent: 10px
   }
-  h2[type = "h2-right"]{
+
+  h2[type = "h2-left-login"] {
+  display: block;
+  height: 400px  
+  font-size: 50px;
+  }
+  h2[type = "h2-right-login"]{
  
   }
 button[type = Login]{
@@ -87,37 +105,48 @@ button[type = Login]{
 
 
 
-	input[type = f_name] {
-		width: 190px;
+input[type = f_name] {
+	    
+		width: 145px;
         height: 33px;
+		padding: .5rem;
       }
-      input[type = l_name] {
-		width: 190px;
-		height: 33px;
+input[type = l_name] {
+	    position: fixed;
+		width: 145px;
+        height: 33px;
+		padding: .5rem;
       }
-      input[type = email] {  
-		width: 400px;
-		height: 33px;	
+ 
+input[type = email] {  
+		display: block;
+		width: 295px;
+		height: 33px;
+		 padding: .5rem;
       }
-      input[type = password ] {  
-		width: 400px;
+input[type = password ] {  
+		display: block;
+		width: 295px;
 		height: 33px;
-      }   
-	  input[type = psw-repeat ] {
-		width: 400px;
-		height: 33px;
-     }    
-	  label[type = f_name ] {	
+		  padding: .5rem;
+ }   
+label[type = f_name ] {	
+		display: block;
 		width: 130px;
 		height: 28px;
+		padding: .5rem;	
+   
      }  
 	  label[type = email ] {
+		display: block;
 		width: 165px;
 		height: 28px;
+		  padding: .5rem;
       }  
 	   label[type = password ] {		
 		width: 110px;
 		height: 28px;
+		  padding: .5rem;
       }  
 	  label[type = psw-repeat ] {
 		width: 300px;

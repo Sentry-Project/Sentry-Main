@@ -24,7 +24,7 @@
     <div class="container">
       <img src="./images/sentry.png" alt="Sentry Website Logo" class="logo">
       <ul>
-        <li><a href="homepage.html" >Home</a></li>
+        <li><a href="homepage.html" class="current">Home</a></li>
         <li><a href="#Mysentry" >Mysentry</a></li>
         <li><a href="#Alert">Alret</a></li>
         <li><a href="login.html" class="current">Login/Register</a></li>

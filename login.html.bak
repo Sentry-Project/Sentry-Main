@@ -55,7 +55,7 @@
 
 <br>
     <label type="password"><b>Password</b></label>
-<br><br>
+<br>
     <input type="password" placeholder="Enter Password" name="password" id="password" required></input>
 
 
