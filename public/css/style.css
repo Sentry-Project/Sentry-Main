@@ -120,6 +120,22 @@ p {
   clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
 }
 
+.success {
+  color: rgb(5, 70, 5);
+  background-color: rgb(192, 245, 176);
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.failed {
+  color: rgb(70, 5, 5);
+  background-color: rgb(245, 176, 176);
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
 /* Header */
 #main-header {
   padding: 2rem;

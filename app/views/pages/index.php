@@ -66,6 +66,7 @@
 
         <div class="contact-form">
           <h2>Contact Us</h2>
+          <span id="contact-confirm"></span>
           <form action="">
             <label for="name">Name</label>
             <input type="text" name="name" id="name">
@@ -76,7 +77,7 @@
             <label for="message">Message</label>
             <textarea name="message" id="message"></textarea>
   
-            <input class="h-btn" type="submit" value="Send">
+            <input class="h-btn" type="button" onclick="sendEmail()" value="Send">
           </form>
         </div>
 
