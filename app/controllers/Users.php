@@ -4,6 +4,7 @@ class Users extends Controller{
     public function __construct()
   {
     $this->userModel = $this->model('User');
+    $this->roomModel = $this->model('Room');
   }
 
 public function register(){
@@ -110,7 +111,7 @@ public function login(){
 }
 
 public function setting(){
-   
+    
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -137,12 +138,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         
 
 } else{
+    $id = $_SESSION['user_id'];
+    $user = $this->userModel->getUser($id);
+    $rooms = $this->roomModel->getRooms($id);
 
-    $user = $this->userModel->getUser($_SESSION['user_id']);
 
     $data = [
             'user' => $user,
-      
+            'rooms' => $rooms
         ];
 
         $this->view('dashboard/setting', $data);

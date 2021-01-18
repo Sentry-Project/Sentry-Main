@@ -20,12 +20,17 @@ class Rooms extends Controller {
   // }
 
   public function newroom(){
+    $id = $_SESSION['user_id'];
+    $user = $this->userModel->getUser($id);
+    $rooms = $this->roomModel->getRooms($id);
    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $fourRandomDigit = mt_rand(1000,9999);
     $threeRandomDigit = mt_rand(100,999);
 
     $data = [
+      'user' => $user,
+      'room' => $rooms,
       'room_id' => $fourRandomDigit,
       'device_id' => $threeRandomDigit,
       'user_id' => $_SESSION['user_id'],
@@ -66,11 +71,8 @@ class Rooms extends Controller {
     $user = $this->userModel->getUser($id);
 
     $data = [
-      'title' => 'Welcome',
-      
-    ];
-
-    $data = [
+      'user' => $user,
+      'rooms' => $rooms,
       //'room_id' => 
       'room_name' => '',
       //'device_name' =>
