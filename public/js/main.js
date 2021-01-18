@@ -54,3 +54,18 @@ var check = function() {
       return true;
     }
   }
+
+  $(document).ready(function(){
+
+    $('.menu').click(function(e){
+      e.preventDefault();
+      var rid = $(this).attr("data-rid");
+      $.post("http://localhost/sentry/dashboard/room", {
+        room : rid
+      }, function(data, status){
+          $(".test-wrap").html(data);
+          console.log(data);
+      })
+
+    });
+  });

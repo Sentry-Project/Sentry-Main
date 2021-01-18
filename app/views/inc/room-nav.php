@@ -4,7 +4,10 @@
   <li><?php echo $data['user']->FIRST_NAME; ?>'s Home</li>
   <br>
 
-  <li><a href="<?php echo URLROOT; ?>/dashboard/room">Rooms</a></li>
+  <?php foreach($data['rooms'] as $room) : ?>
+    <li><a class="menu" href="" data-rid="<?php echo $room->ROOM_ID ?>"><?php echo $room->ROOM_NAME; ?></a></li>
+
+  <?php endforeach; ?>
 
   <br>
   <br>

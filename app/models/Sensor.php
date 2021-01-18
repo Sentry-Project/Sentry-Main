@@ -6,39 +6,7 @@
       $this->db = new Database;
     }
 
-    public function createSensor($sid,$room){
-      $this->db->query("INSERT INTO sensor(SENSOR_ID,SENSOR_TYPE,SENSOR_NAME,SENSOR_UNITS,FK_ROOM_ID) 
-        SELECT :sensor_id, 'temperature','temperature','celsius',:room_id
-        FROM room
-        WHERE ROOM_ID= :room_id");
-
-        $this->db->bind(':sensor_id', $data['sensor_id']);
-        $this->db->bind(':room_id', $data['room_id']);
-
-        if($this->db->execute()){
-          return true;
-        } else{
-          return false;
-          
-        }
- 
-    }
-
-
-/*
-INSERT INTO `sensor` (`SENSOR_ID`, `SENSOR_TYPE`, `SENSOR_NAME`, `SENSOR_UNITS`, `FK_ROOM_ID`) VALUES
-(1, 'temperature', 'temperature', 'celsius', 1),
-(2, 'temperature', 'temperature', 'celsius', 2),
-(3, 'temperature', 'temperature', 'celsius', 3),
-(4, 'water', 'water', 'm^3', 3),
-(6, 'temperatrue', 'temperatrue', 'celsius', 4);
-INSERT INTO `sensor_data` (`ID`, `SENSOR_STATUS`, `SENSOR_VALUE`, `TIMESTAMP`, `FK_SENSOR_ID`) VALUES
-(1, 1, 10, '2021-01-13 22:09:24', 1),
-(2, 1, 67, '2021-01-16 17:11:48', 2),
-(3, 1, 99, '2021-01-16 15:00:49', 3),
-(4, 1, 0.0001, '2021-01-15 21:56:49', 4),
-(6, 1, 14, '2021-01-16 12:58:09', 6);*/
-
+   
     public function getSensors($room){
         $this->db->query("SELECT * FROM sensor 
         INNER JOIN room Inner JOIN sensor_data 

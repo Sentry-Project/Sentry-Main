@@ -102,8 +102,7 @@
     </div>
   <?php endif;?>
    <?php endforeach; ?>
-   <?php else:?>
-    <p class="safe">no warnings now</p> 
+    
 <?php endif; ?>
 <?php if($data['shownote']): ?>
     <p class="note"> All devices automatically switched off</p>

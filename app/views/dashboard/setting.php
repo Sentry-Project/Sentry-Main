@@ -20,7 +20,7 @@
 			<label for="new-device">House Address</label>
             <input type="text" name="address" id="house-address" placeholder = "5 rue Dejean, Boulevard,75002"value="<?php echo $data['user']->ADDRESS ?>"required/>
 			<label for="new-device" >Emergengy Contact</label>
-            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo $data['user']->EC_PHONE_NUM ?>"required/>
+            <input type="text" name="dnumber" id="emergency-contact" placeholder = "+33 7 12 34 53 2" value="<?php echo (!empty($data['user']->EC_PHONE_NUM) ? $data['user']->EC_PHONE_NUM : '')  ?>"required/>
 <br><br>
             <input type="submit" value="Save" >
             
