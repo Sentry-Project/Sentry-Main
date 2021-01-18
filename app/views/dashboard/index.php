@@ -107,13 +107,12 @@
 <?php endif; ?>
 <?php if($data['shownote']): ?>
     <p class="note"> All devices automatically switched off</p>
-    <?php else:?>
-    <p class="safe"></p> 
+    <?php elseif(!$data['shownote']):?>
+      <p class="safe">no high danger warnings now</p> 
 <?php endif;?>
  </div>
 
  </section>
-
 
 
 

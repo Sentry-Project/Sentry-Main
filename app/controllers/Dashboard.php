@@ -97,7 +97,7 @@ class Dashboard extends Controller {
           }elseif($result->SENSOR_NAME == 'water'and $result->SENSOR_VALUE >= 0.005){
              $this->sensorModel->offdev($id);
             return true;  
-          }       
+          }   
         }
         return false;
       }

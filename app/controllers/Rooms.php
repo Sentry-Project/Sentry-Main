@@ -9,6 +9,7 @@ class Rooms extends Controller {
 
     $this->roomModel = $this->model('Room');
     $this->userModel = $this->model('User');
+    $this->sensorModel = $this->model('Sensor');
   }
 
   // public function index(){
@@ -25,6 +26,7 @@ class Rooms extends Controller {
     $rooms = $this->roomModel->getRooms($id);
    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+    $fiveRandomDigit = mt_rand(10000,99999);
     $fourRandomDigit = mt_rand(1000,9999);
     $threeRandomDigit = mt_rand(100,999);
 
@@ -37,6 +39,7 @@ class Rooms extends Controller {
       'room_name' => trim($_POST['rname']),
       'device_status' => 0,
       'device_name' => trim($_POST['dname']),
+      'sensor_id'=> $fiveRandomDigit,
       'room_name_err' => '',
       'device_name_err' => ''
     ];
@@ -55,6 +58,7 @@ class Rooms extends Controller {
       if(empty($data['room_name_err']) && empty($data['device_name_err'])){
 
         if($this->roomModel->addRoom($data)){
+      
           flash('room_added', 'Room Added');
           redirect('dashboard');
         }
