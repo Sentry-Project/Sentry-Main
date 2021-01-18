@@ -34,7 +34,15 @@
         $this->db->bind(':room_id', $data['room_id']);
 
         if($this->db->execute()){
-          return true;
+           $this->db->query("INSERT INTO sensor_data(ID, SENSOR_STATUS, SENSOR_VALUE, TIMESTAMP, FK_SENSOR_ID) VALUES ( :sdid, '0', '0', current_timestamp(), :sid )");
+             $this->db->bind(':sdid', $data['sd_id']);
+             $this->db->bind(':sid', $data['sensor_id']);
+
+             if($this->db->execute()){
+                return true;
+             }else{
+              return false;
+             }
         } else{
           return false;
           

@@ -19,7 +19,7 @@ var check = function() {
 
     if(NotEmpty(name) && NotEmpty(telephone) && NotEmpty(email) && NotEmpty(message)){
       $.ajax({ 
-        url: 'http://localhost/sentry/pages/contactForm',
+        url: 'http://localhost:8080/sentry2/pages/contactForm',
         method: 'POST',
         dataType: 'json',
         data: {
@@ -60,7 +60,7 @@ var check = function() {
     $('.menu').click(function(e){
       e.preventDefault();
       var rid = $(this).attr("data-rid");
-      $.post("http://localhost/sentry/dashboard/room", {
+      $.post("http://localhost:8080/sentry2/dashboard/room", {
         room : rid
       }, function(data, status){
           $(".test-wrap").html(data);

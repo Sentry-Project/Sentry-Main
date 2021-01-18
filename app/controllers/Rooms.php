@@ -26,6 +26,7 @@ class Rooms extends Controller {
     $rooms = $this->roomModel->getRooms($id);
    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+    $sixRandomDigit = mt_rand(100000,999999);
     $fiveRandomDigit = mt_rand(10000,99999);
     $fourRandomDigit = mt_rand(1000,9999);
     $threeRandomDigit = mt_rand(100,999);
@@ -40,6 +41,7 @@ class Rooms extends Controller {
       'device_status' => 0,
       'device_name' => trim($_POST['dname']),
       'sensor_id'=> $fiveRandomDigit,
+      'sd_id'=> $sixRandomDigit,
       'room_name_err' => '',
       'device_name_err' => ''
     ];
