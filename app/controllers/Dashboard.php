@@ -54,8 +54,13 @@ class Dashboard extends Controller {
 
   }
     public function room(){
-      $id = $_SESSION['user_id'];
-      $room_id=7709;
+    
+
+      if(isset($_POST['room'])){
+        $room_id = $_POST['room'];
+
+        $id = $_SESSION['user_id'];
+      // $room_id=7709;
 
       $rooms = $this->roomModel->getRooms($id);
       $user = $this->userModel->getUser($id);
@@ -73,6 +78,24 @@ class Dashboard extends Controller {
       ];
       $this->view('dashboard/room', $data);
 
+      } else{
+        $id = $_SESSION['user_id'];
+      // $room_id=7709;
+
+      $rooms = $this->roomModel->getRooms($id);
+      $user = $this->userModel->getUser($id);
+      
+      $data = [
+        'title' => 'Welcome',
+        'rooms' => $rooms,
+        'room' => '',
+        'user' => $user
+      
+      ];
+        $this->view('dashboard/room', $data);
+      }
+
+      
     }
 
      public function warning($id){
