@@ -1,21 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
 
-  <!--left navigational bar-->
-  <div class="left_nav">
-    <i class="fas fa-home fa-4x"></i>
-    <li>Emma's Home</li>
-    <br>
-    <li><a href="#Livingroom">Living Room</a></li>
-    <li><a href="#Kitchen">Kitchen</a></li>
-    <li><a href="#Bedroom1">Bedroom1</a></li>
-    <li><a href="#Foyer">Foyer</a></li>
-    <br>
-    <br>
-    <li>--------</li>
-      <li><a href="AddNewRoom.html">Add New Room</a></li>
-      <li><a href="Setting.html">Settings</a></li>
-      </div>
+<?php require APPROOT . '/views/inc/left-nav.php'; ?>
+
 
     <section id="new-room">
       <div class="container">

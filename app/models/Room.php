@@ -39,7 +39,7 @@
 }
 
   public function getRooms($id){
-    $this->db->query("SELECT * FROM room 
+    $this->db->query("SELECT ROOM_ID, ROOM_NAME FROM room 
                       INNER JOIN user 
                       ON room.FK_USER_ID = user.USER_ID
                       WHERE  FK_USER_ID = :id");
@@ -50,4 +50,17 @@
 
       return $results;
   }
+
+ 
+    public function getRoom($user,$room){
+      $this->db->query( " select *
+    FROM room INNER JOIN user ON room.    FK_USER_ID = user.USER_ID
+    WHERE user.USER_ID =:user AND room.ROOM_ID = :room");
+    $this->db->bind(':user', $user);
+    $this->db->bind(':room', $room);
+    $results = $this->db->single();
+
+    return $results;
+
+    }
 }
