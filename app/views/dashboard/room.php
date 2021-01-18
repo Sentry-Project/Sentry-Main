@@ -75,7 +75,8 @@
   
  <div class="module2" style="display:inline-block;">
 
-    <div class="button-device">Add New Device</div> 
+ <a href="<?php echo URLROOT; ?>/rooms/newdevice" class="button-device">Add New Device</a>
+
  
   </div>
     </div>

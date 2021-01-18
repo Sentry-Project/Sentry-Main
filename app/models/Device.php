@@ -16,6 +16,22 @@
         return $results;    
     }
 
+    public function addDevice($data){
+      $this->db->query("INSERT INTO device(DEVICE_ID, DEVICE_NAME, DEVICE_STATUS, FK_ROOM_ID) 
+        VALUES (:device_id, :device_name, '1', :room_id)");
+      
+      $this->db->bind(':device_id', $data['device_id']);
+      $this->db->bind(':device_name', $data['device_name']);
+      $this->db->bind(':room_id', $data['room_id']);
+
+      if($this->db->execute()){
+        return true;
+      } else {
+        return false;
+      }
+
+    }
+
 
 
   }
