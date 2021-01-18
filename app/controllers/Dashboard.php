@@ -35,7 +35,7 @@ class Dashboard extends Controller {
   }
     public function room(){
       $id = $_SESSION['user_id'];
-      $room_id= 3;
+      $room_id=3;
 
       $rooms = $this->roomModel->getRooms($id);
       $user = $this->userModel->getUser($id);
