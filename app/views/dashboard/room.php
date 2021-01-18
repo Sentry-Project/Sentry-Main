@@ -1,9 +1,11 @@
+<div class="test-wrap">
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
-<?php require APPROOT . '/views/inc/left-nav.php'; ?>
+<?php require APPROOT . '/views/inc/room-nav.php'; ?>
 
+<?php  if($data['room']) : ?>
   <div class="module3">
-   
+ 
   
   <span>
     <h1>&nbsp;<?php echo $data['room']->ROOM_NAME ?></h1> 
@@ -80,15 +82,14 @@
   
    
 	
-
+  
      
 
 
-</body>
+    <?php  endif; ?>
 
-<script>
-   
-	
-</script>
+
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
+
+</div>

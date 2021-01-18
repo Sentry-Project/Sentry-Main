@@ -24,7 +24,7 @@
       <ul>
         <?php if(isset($_SESSION['user_id'])) :  ?>
           <li><a href="<?php echo URLROOT; ?>/dashboard" >My Sentry</a></li>
-          <li><a href="#" >Alert</a></li>
+          
           <li><a href="<?php echo URLROOT; ?>/users/logout">Logout</a></li>
 
 

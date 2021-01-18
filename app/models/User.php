@@ -60,20 +60,15 @@
         $this->db->query("SELECT * FROM user WHERE USER_ID = :id"); 
         $this->db->bind(':id', $id);
         $row = $this->db->single();
-        return $row;
+        if($this->db->rowCount() > 0){
+          return $row;
+        } else{
+          return false;
+        }
+        
 
       }
 
-
-      /*public function getEC($id){
-      $this->db->query("select PHONE_NUM 
-      from emergency_contact
-      where USER_USER_ID= :id"); 
-
-      $this->db->bind(':id', $id);
-      $row = $this->db->single();
-      return $row;
-      }*/
 
       public function upUser($fname,$lname,$email,$number,$address,$dnumber,$id){
         $this->db->query("update user set FIRST_NAME=:fname,LAST_NAME=:lname,EMAIL=:email,PHONE_NUM=:number,ADDRESS=:address,EC_PHONE_NUM=:dnumber where USER_ID=:id");
