@@ -26,7 +26,20 @@
         $this->db->bind(':room_id', $data['room_id']);
 
         if($this->db->execute()){
+          $this->db->query("INSERT INTO sensor(SENSOR_ID,SENSOR_TYPE,SENSOR_NAME,SENSOR_UNITS,FK_ROOM_ID) 
+        SELECT :sensor_id, 'temperature','temperature','celsius',:room_id
+        FROM room
+        WHERE ROOM_ID= :room_id");
+        $this->db->bind(':sensor_id', $data['sensor_id']);
+        $this->db->bind(':room_id', $data['room_id']);
+
+        if($this->db->execute()){
           return true;
+        } else{
+          return false;
+          
+        }
+
         } else{
           return false;
         }

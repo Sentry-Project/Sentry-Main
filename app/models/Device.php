@@ -7,8 +7,8 @@
     }
     public function getDevices($room){
         $this->db->query("SELECT * 
-        FROM DEVICE INNER JOIN ROOM ON DEVICE.FK_ROOM_ID= room.ROOM_ID
-        WHERE ROOM.ROOM_ID= :room");
+        FROM device INNER JOIN room ON device.FK_ROOM_ID= room.ROOM_ID
+        WHERE room.ROOM_ID= :room");
         $this->db->bind(':room', $room);
    
         $results = $this->db->resultSet();
