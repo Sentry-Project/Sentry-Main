@@ -10,6 +10,7 @@ class Rooms extends Controller {
     $this->roomModel = $this->model('Room');
     $this->userModel = $this->model('User');
     $this->sensorModel = $this->model('Sensor');
+    $this->deviceModel = $this->model('Device');
   }
 
   // public function index(){
@@ -89,6 +90,58 @@ class Rooms extends Controller {
 
    }
    
+  }
+
+  public function newdevice(){
+
+    $id = $_SESSION['user_id'];
+    $user = $this->userModel->getUser($id);
+
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+      $threeRandomDigit = mt_rand(100,999);
+      $roomId = 3;
+
+      $data = [
+        'user' => $user,
+        'device_name' => $_POST['dname'],
+        'device_name_err' => '',
+        'device_id' => $threeRandomDigit,
+        'room_id' => $roomId
+
+      ];
+
+      if(empty($data['device_name'])){
+        $data['device_name_err'] = "Please enter device name" ;
+
+      }
+
+      if(empty($data['device_name_err'])){
+          if($this->deviceModel->addDevice($data)){
+            redirect('dashboard/index');
+          }else{
+            die('something wrong');
+          }
+      }else{
+        // lOAD VIEW WITH ERRORS
+        $this->view('rooms/newdevice',$data);
+
+      }
+
+    }else{
+      $data = [
+        'user' => $user,
+        'device_name' => '',
+        'device_name_err' => '',
+        'device_id' => '',
+        'room_id' => ''
+
+      ];
+
+      $this->view('rooms/newdevice',$data);
+    }
+
   }
 
   
