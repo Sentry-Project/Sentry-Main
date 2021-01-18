@@ -6,6 +6,7 @@
       $this->db = new Database;
     }
 
+
    
     public function getSensors($room){
         $this->db->query("SELECT * FROM sensor 
